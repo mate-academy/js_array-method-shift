@@ -1,8 +1,8 @@
 {
-  "name": "array-method-includes",
+  "name": "array-method-shift",
   "version": "1.0.0",
-  "description": "Custom implementation of Array.prototype.includes()",
-  "main": "src/arrayMethodIncludes.js",
+  "description": "Custom implementation of Array.prototype.shift()",
+  "main": "src/arrayMethodShift.js",
   "scripts": {
     "test": "jest",
     "lint": "eslint **/*.js"
