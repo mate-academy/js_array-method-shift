@@ -1,7 +1,7 @@
 'use strict';
 
-const applyCustomIncludes = require('./arrayMethodShift');
-applyCustomIncludes();
+const applyCustomShift = require('./arrayMethodShift');
+applyCustomShift();
 
 test('`shift2` is added to [].__proto__', () => {
   expect([].shift2)
