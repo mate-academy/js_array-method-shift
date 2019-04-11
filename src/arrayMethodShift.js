@@ -6,7 +6,12 @@
  */
 function applyCustomShift() {
   [].__proto__.shift2 = function() {
-    // write code here
+    const token = this[0];
+    if (this.length === 0) return token;
+    this.reverse();
+    this.length -= 1;
+    this.reverse();
+    return token;
   };
 }
 
