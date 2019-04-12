@@ -8,6 +8,11 @@ test('`shift2` is added to [].__proto__', () => {
     .toBeInstanceOf(Function);
 });
 
+test(`shift2 doesn't call default shift`, () => {
+  expect([].shift2.toString().includes('.shift('))
+    .toBe(false);
+});
+
 test('Shift single item', () => {
   const source = [0, 1, 2, 3];
   const result = source.shift2();
