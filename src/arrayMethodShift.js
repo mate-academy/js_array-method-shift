@@ -7,7 +7,7 @@
 function applyCustomShift() {
   [].__proto__.shift2 = function() {
     if (this.length === 0) {
-      return undefined;
+      return;
     }
     const deletedElement = this[0];
     this.forEach((currentValue, index, array) => {
