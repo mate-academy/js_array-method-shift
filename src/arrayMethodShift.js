@@ -6,8 +6,12 @@
  */
 function applyCustomShift() {
   [].__proto__.shift2 = function() {
-    // write code here
+    let firstItem = this[0];
+    this.reverse();
+    this.pop();
+    this.reverse();
+
+    return firstItem;
   };
 }
-
 module.exports = applyCustomShift;
