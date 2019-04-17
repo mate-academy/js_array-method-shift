@@ -7,9 +7,7 @@
 function applyCustomShift() {
   [].__proto__.shift2 = function() {
     let firstItem = this[0];
-    this.reverse();
-    this.pop();
-    this.reverse();
+    this.splice(0, 1);
 
     return firstItem;
   };
