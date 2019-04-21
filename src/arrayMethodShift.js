@@ -5,9 +5,14 @@
  */
 function applyCustomShift() {
   [].__proto__.shift2 = function() {
+    const arrayLength = this.length;
+    if (arrayLength === 0) {
+      return undefined;
+    }
+
     const item = this[0];
     this.reverse();
-    this.length = this.length - 1;
+    this.length = arrayLength - 1;
     this.reverse();
     return item;
   };
