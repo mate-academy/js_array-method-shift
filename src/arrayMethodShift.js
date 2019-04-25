@@ -6,9 +6,9 @@
  */
 function applyCustomShift() {
   [].__proto__.shift2 = function() {
-    let array = this;
-    let element = array[0] === undefined ? undefined : array.splice(0, 1);
-    return element ? +element : undefined;
+    let firstItem = this[0];
+    this.splice(0, 1);
+    return firstItem;
   };
 }
 
