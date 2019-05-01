@@ -11,9 +11,12 @@ function applyCustomShift() {
     }
 
     const item = this[0];
-    this.reverse();
-    this.length = arrayLength - 1;
-    this.reverse();
+    const newArray = [...this];
+    this.length = this.length - 1;
+    for (let i = 0; i < newArray.length - 1; i++) {
+      this[i] = newArray[i + 1];
+    }
+
     return item;
   };
 }
