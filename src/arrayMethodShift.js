@@ -5,7 +5,7 @@
  */
 function applyCustomShift() {
   [].__proto__.shift2 = function() {
-    const myShiftMethod = this[0];
+    const deleteElement = this[0];
 
     if (this.length < 1) {
       return;
@@ -16,7 +16,7 @@ function applyCustomShift() {
     }
     this.length--;
 
-    return myShiftMethod;
+    return deleteElement;
   };
 }
 
