@@ -5,7 +5,7 @@
  */
 function applyCustomShift() {
   [].__proto__.shift2 = function() {
-    // write code here
+    return this.splice(0, 1)[0];
   };
 }
 
