@@ -15,7 +15,7 @@ function applyCustomShift() {
     }
     this.length--;
 
-    return element;
+    return firstElement;
   };
 }
 
