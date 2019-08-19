@@ -8,7 +8,7 @@ function applyCustomShift() {
     if (this.length === 0) {
       return undefined;
     }
-    const element = this[0];
+    const firstElement = this[0];
 
     for (let i = 0; i < this.length; i++) {
       this[i] = this[i + 1];
