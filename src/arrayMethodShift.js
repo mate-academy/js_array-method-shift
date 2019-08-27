@@ -11,7 +11,7 @@ function applyCustomShift() {
       this[i - 1] = this[i];
     }
 
-    this.length !== 0 ? this.length = this.length - 1 : this.length = 0;
+    this.length = this.length !== 0 ? this.length - 1 : 0;
 
     return firstElement;
   };
