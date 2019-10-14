@@ -5,7 +5,14 @@
  */
 function applyCustomShift() {
   [].__proto__.shift2 = function() {
-    // write code here
+    const arr = this;
+    let first;
+    if (arr.length === 0) {
+      first = undefined;
+    } else {
+      first = +arr.splice(0, 1).join();
+    }
+    return first;
   };
 }
 
