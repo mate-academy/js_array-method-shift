@@ -10,7 +10,6 @@ function applyCustomShift() {
     }
 
     const returnedValue = this[0];
-    delete this[0];
     for (let i = 0; i < this.length - 1; i++) {
       this[i] = this[i + 1];
     }
