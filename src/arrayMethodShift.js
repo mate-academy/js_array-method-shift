@@ -5,16 +5,17 @@
  */
 function applyCustomShift() {
   [].__proto__.shift2 = function() {
-    const arr = [];
-    const firstElement = this[0];
-    for (let i = 1; i < this.length; i++) {
-      arr.push(this[i]);
+    if (this.length === 0) {
+      return undefined;
     }
-    this.length = [];
 
-    for (let j = 0; j < arr.length; j++) {
-      this.push(arr[j]);
+    const firstElement = this[0];
+    for (let i = 0; i < this.length - 1; i++) {
+      const replacedElement = this[i + 1];
+      this[i + 1] = this[i];
+      this[i] = replacedElement;
     }
+    this.length = this.length - 1;
     return firstElement;
   };
 }
