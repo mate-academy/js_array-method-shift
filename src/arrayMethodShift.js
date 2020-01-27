@@ -9,13 +9,15 @@ function applyCustomShift() {
       return undefined;
     }
 
-    const shiftItem = this[0];
+    const shiftedItem = this[0];
 
-    this.reverse();
+    for (let i = 0; i < this.length - 1; i++) {
+      this[i] = this[i + 1];
+    }
+
     this.length -= 1;
-    this.reverse();
 
-    return shiftItem;
+    return shiftedItem;
   };
 }
 
