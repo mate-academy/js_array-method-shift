@@ -9,12 +9,12 @@ function applyCustomShift() {
       return undefined;
     }
 
-    const result = Array.from(this)[0];
+    const result = this[0];
 
     for (let i = 0; i < this.length; i++) {
       this[i] = this[i + 1];
     }
-    this.length--;
+    this.length -= 1;
 
     return result;
   };
