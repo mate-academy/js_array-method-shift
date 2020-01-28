@@ -16,6 +16,7 @@ function applyCustomShift() {
     for (let i = 0; i < this.length; i++) {
       this[i] = this[i + 1];
     }
+
     this.length -= 1;
 
     return firstElement;
