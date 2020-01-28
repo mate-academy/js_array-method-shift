@@ -12,10 +12,12 @@ function applyCustomShift() {
         this[i] = this[i + 1];
       }
 
-      this.length = this.length - 1;
+      this.length -= 1;
 
       return item;
     }
+
+    return undefined;
   };
 }
 
