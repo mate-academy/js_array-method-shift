@@ -5,14 +5,13 @@
  */
 function applyCustomShift() {
   [].__proto__.shift2 = function() {
-    // write code here
     const removedElement = this[0];
 
     if (this.length < 1) {
-      return undefined;
+      return;
     }
 
-    for (let i = 0; i < this.length; i++) {
+    for (let i = 0; i < this.length; i += 1) {
       this[i] = this[i + 1];
     }
 
