@@ -9,15 +9,10 @@ function applyCustomShift() {
       return;
     }
 
-    let result = 0;
+    const result = this[0];
 
     for (let i = 0; i < this.length; i++) {
-      if (i === 0) {
-        result = this[i];
-        this[i] = this[i + 1];
-      } else {
-        this[i] = this[i + 1];
-      }
+      this[i] = this[i + 1];
     }
     this.length = this.length - 1;
 
