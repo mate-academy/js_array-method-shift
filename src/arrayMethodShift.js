@@ -9,12 +9,13 @@ function applyCustomShift() {
       return;
     }
 
-    this.reverse();
+    const deletedElement = this[0];
 
-    const deletedElement = this[this.length - 1];
+    for (let i = 0; i < this.length; i++) {
+      this[i] = this[i + 1];
+    }
 
     this.length -= 1;
-    this.reverse();
 
     return deletedElement;
   };
