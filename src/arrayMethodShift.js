@@ -5,7 +5,11 @@
  */
 function applyCustomShift() {
   [].__proto__.shift2 = function() {
-    // write code here
+    const res = this.reverse().pop();
+
+    this.reverse();
+
+    return res;
   };
 }
 
