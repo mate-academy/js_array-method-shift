@@ -11,9 +11,8 @@ function applyCustomShift() {
     };
 
     const deletedElement = this[0];
-    const endLine = this.length;
 
-    for (let i = 0; i < endLine; i++) {
+    for (let i = 0; i < this.length; i++) {
       this[i] = this[i + 1];
     };
 
