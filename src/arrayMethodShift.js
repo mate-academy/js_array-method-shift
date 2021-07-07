@@ -5,8 +5,11 @@
  */
 function applyCustomShift() {
   [].__proto__.shift2 = function() {
-    // write code here
+    if (this.length === 0) {
+      return undefined;
+    };
+    return this.splice(0, 1)[0];
   };
 }
-
+applyCustomShift();
 module.exports = applyCustomShift;
